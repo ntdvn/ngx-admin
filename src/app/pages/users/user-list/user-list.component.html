@@ -1,0 +1,29 @@
+<nb-card>
+  <nb-card-header>
+    <div class="d-flex flex-row justify-content-between .align-items-center">
+      <div class="d-flex justify-content-center align-items-center">
+        Smart Table
+      </div>
+      <div class="align-self-stretch bg-success">
+        <button
+          routerLink="/pages/users/add"
+          nbButton
+          status="primary"
+          class="float-right"
+        >
+          Thêm người dùng<nb-icon icon="plus-circle-outline"></nb-icon>
+        </button>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table
+      [settings]="settings"
+      [source]="source"
+      (deleteConfirm)="onDeleteConfirm($event)"
+      (userRowSelect)="onUserRowSelect($event)"
+    >
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

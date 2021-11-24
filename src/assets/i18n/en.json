@@ -2,5 +2,10 @@
   "auth": {
     "login": "Login",
     "register": "Register"
+  },
+  "users": {
+    "title": "Users management",
+    "list": "Users",
+    "add": "Add user"
   }
 }

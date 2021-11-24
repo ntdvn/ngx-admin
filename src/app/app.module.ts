@@ -1,3 +1,5 @@
+import { LoggedGuard } from "./_guards/logged.guard";
+import { AuthGuard } from "./_guards/auth.guard";
 import {
   HttpClient,
   HttpErrorResponse,
@@ -27,6 +29,7 @@ import {
 } from "@nebular/theme";
 import {
   getDeepFromObject,
+  NbAuthJWTToken,
   NbAuthModule,
   NbPasswordAuthStrategy,
   NbPasswordAuthStrategyOptions,
@@ -59,6 +62,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     NbAuthModule.forRoot({
       strategies: [
         NbPasswordAuthStrategy.setup({
+          token: {
+            class: NbAuthJWTToken,
+          },
           baseEndpoint: "https://localhost:5001/api/authentication/",
           name: "email",
           login: {
@@ -120,6 +126,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
   ],
+  providers: [AuthGuard, LoggedGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

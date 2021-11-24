@@ -1,22 +1,18 @@
+import { LoggedGuard } from "./_guards/logged.guard";
+import { AuthGuard } from "./_guards/auth.guard";
 import { ExtraOptions, RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
-import {
-  NbAuthComponent,
-  NbLoginComponent,
-  NbLogoutComponent,
-  NbRegisterComponent,
-  NbRequestPasswordComponent,
-  NbResetPasswordComponent,
-} from "@nebular/auth";
 
 export const routes: Routes = [
   {
     path: "pages",
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import("./pages/pages.module").then((m) => m.PagesModule),
   },
   {
     path: "auth",
+    canActivate: [LoggedGuard],
     loadChildren: () =>
       import("./pages/auth/ngx-auth-module.module").then(
         (m) => m.NgxAuthModule
@@ -34,10 +30,10 @@ export const routes: Routes = [
   //       path: "login",
   //       component: NbLoginComponent,
   //     },
-      // {
-      //   path: "register",
-      //   component: NbRegisterComponent,
-      // },
+  // {
+  //   path: "register",
+  //   component: NbRegisterComponent,
+  // },
   //     {
   //       path: "logout",
   //       component: NbLogoutComponent,

@@ -1,3 +1,5 @@
+import { UserListComponent } from "./user-list/user-list.component";
+import { UserAddComponent } from "./user-add/user-add.component";
 import { UsersComponent } from "./users.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -6,16 +8,16 @@ const routes: Routes = [
   {
     path: "",
     component: UsersComponent,
-    // children: [
-    //   {
-    //     path: 'smart-table',
-    //     component: SmartTableComponent,
-    //   },
-    //   {
-    //     path: 'tree-grid',
-    //     component: TreeGridComponent,
-    //   },
-    // ],
+    children: [
+      {
+        path: "list",
+        component: UserListComponent,
+      },
+      {
+        path: "add",
+        component: UserAddComponent,
+      },
+    ],
   },
 ];
 

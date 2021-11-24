@@ -1,5 +1,3 @@
-import { UsersModule } from "./users/users.module";
-import { UsersComponent } from "./users/users.component";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
 

@@ -1,6 +1,16 @@
 {
-    "auth": {
-        "login": "Đăng nhập",
-        "register": "Đăng ký"
-    }
+  "auth": {
+    "login": "Đăng nhập",
+    "register": "Đăng ký"
+  },
+  "groups": {
+    "title": "Quản lý nhóm người dùng",
+    "roles": "Danh sách quyền",
+    "": ""
+  },
+  "users": {
+    "title": "Quản lý người dùng",
+    "list": "Danh sách người dùng",
+    "add": "Thêm người dùng"
+  }
 }
