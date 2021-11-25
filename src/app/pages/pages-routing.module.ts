@@ -12,6 +12,11 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       {
+        path: "groups",
+        loadChildren: () =>
+          import("./groups/groups.module").then((m) => m.GroupsModule),
+      },
+      {
         path: "users",
         loadChildren: () =>
           import("./users/users.module").then((m) => m.UsersModule),

@@ -3,13 +3,17 @@
     "login": "Đăng nhập",
     "register": "Đăng ký"
   },
+  "feature": {
+    "access": "Truy cập"
+  },
   "groups": {
-    "title": "Quản lý nhóm người dùng",
+    "title": "Nhóm người dùng",
+    "list": "Danh sách nhóm người dùng",
     "roles": "Danh sách quyền",
     "": ""
   },
   "users": {
-    "title": "Quản lý người dùng",
+    "title": "Người dùng",
     "list": "Danh sách người dùng",
     "add": "Thêm người dùng"
   }

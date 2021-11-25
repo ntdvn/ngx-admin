@@ -17,20 +17,20 @@ export class PagesComponent {
 
   MENU_ITEMS: NbMenuItem[] = [
     {
-      title: "FEATURES",
+      title: this.translateService.instant("feature.access").toUpperCase(),
       group: true,
     },
     {
-      title: this.translateService.instant("users.title"),
-      icon: "person-outline",
+      title: this.translateService.instant("groups.title"),
+      icon: "people-outline",
       children: [
         {
-          title: this.translateService.instant("users.list"),
-          link: "/pages/users/list",
+          title: this.translateService.instant("groups.roles"),
+          link: "/pages/groups/roles",
         },
         {
-          title: this.translateService.instant("users.add"),
-          link: "/pages/users/add",
+          title: this.translateService.instant("groups.list"),
+          link: "/pages/groups/list",
         },
         // {
         //   title: "Infinite List",
